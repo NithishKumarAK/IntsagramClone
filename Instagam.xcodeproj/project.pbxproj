@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504E486B5A4C0E5633AAE841 /* Pods_Instagam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFA69B65BD485983D08424A /* Pods_Instagam.framework */; };
 		9F99C2D024EAE88200F89D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C2CF24EAE88200F89D57 /* AppDelegate.swift */; };
 		9F99C2D224EAE88200F89D57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C2D124EAE88200F89D57 /* SceneDelegate.swift */; };
 		9F99C2D424EAE88200F89D57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C2D324EAE88200F89D57 /* HomeViewController.swift */; };
@@ -27,9 +28,15 @@
 		9F99C30324EAEC1500F89D57 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30224EAEC1500F89D57 /* SearchResultViewController.swift */; };
 		9F99C30524EAEC4E00F89D57 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30424EAEC4E00F89D57 /* PostEditorViewController.swift */; };
 		9F99C30724EAEC6B00F89D57 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30624EAEC6B00F89D57 /* PublishPostViewController.swift */; };
+		9F99C30B24EB403B00F89D57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F99C30A24EB403B00F89D57 /* GoogleService-Info.plist */; };
+		9F99C30E24EB42D900F89D57 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */; };
+		9F99C31024EB43F200F89D57 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30F24EB43F200F89D57 /* AuthManager.swift */; };
+		9F99C31224EB447100F89D57 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31124EB447100F89D57 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CFA69B65BD485983D08424A /* Pods_Instagam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF5CB966529C290FD0C62C3 /* Pods-Instagam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagam.debug.xcconfig"; path = "Target Support Files/Pods-Instagam/Pods-Instagam.debug.xcconfig"; sourceTree = "<group>"; };
 		9F99C2CC24EAE88200F89D57 /* Instagam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F99C2CF24EAE88200F89D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F99C2D124EAE88200F89D57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +59,11 @@
 		9F99C30224EAEC1500F89D57 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		9F99C30424EAEC4E00F89D57 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		9F99C30624EAEC6B00F89D57 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		9F99C30A24EB403B00F89D57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9F99C30F24EB43F200F89D57 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		9F99C31124EB447100F89D57 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B50EBB5C850380F36C367938 /* Pods-Instagam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagam.release.xcconfig"; path = "Target Support Files/Pods-Instagam/Pods-Instagam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E486B5A4C0E5633AAE841 /* Pods_Instagam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07D13B61DD01565F63034449 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BF5CB966529C290FD0C62C3 /* Pods-Instagam.debug.xcconfig */,
+				B50EBB5C850380F36C367938 /* Pods-Instagam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F99C2C324EAE88200F89D57 = {
 			isa = PBXGroup;
 			children = (
 				9F99C2CE24EAE88200F89D57 /* Instagam */,
 				9F99C2CD24EAE88200F89D57 /* Products */,
+				07D13B61DD01565F63034449 /* Pods */,
+				E5ED7CE0958F613D629AE76F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,8 +145,12 @@
 		9F99C2E624EAE93200F89D57 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F99C30A24EB403B00F89D57 /* GoogleService-Info.plist */,
 				9F99C2CF24EAE88200F89D57 /* AppDelegate.swift */,
 				9F99C2D124EAE88200F89D57 /* SceneDelegate.swift */,
+				9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */,
+				9F99C30F24EB43F200F89D57 /* AuthManager.swift */,
+				9F99C31124EB447100F89D57 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,14 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				9F99C2F324EAEB4400F89D57 /* Onboarding */,
-				9F99C2F824EAEB9700F89D57 /* PostViewController.swift */,
-				9F99C2FA24EAEBB800F89D57 /* EditProfileViewController.swift */,
-				9F99C2FC24EAEBD300F89D57 /* SetttingsViewController.swift */,
-				9F99C2FE24EAEBE200F89D57 /* ListingViewController.swift */,
-				9F99C30024EAEBFE00F89D57 /* SearchViewController.swift */,
-				9F99C30224EAEC1500F89D57 /* SearchResultViewController.swift */,
-				9F99C30424EAEC4E00F89D57 /* PostEditorViewController.swift */,
-				9F99C30624EAEC6B00F89D57 /* PublishPostViewController.swift */,
+				9F99C30C24EB421500F89D57 /* General */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -173,6 +194,29 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		9F99C30C24EB421500F89D57 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9F99C2F824EAEB9700F89D57 /* PostViewController.swift */,
+				9F99C2FA24EAEBB800F89D57 /* EditProfileViewController.swift */,
+				9F99C2FC24EAEBD300F89D57 /* SetttingsViewController.swift */,
+				9F99C2FE24EAEBE200F89D57 /* ListingViewController.swift */,
+				9F99C30024EAEBFE00F89D57 /* SearchViewController.swift */,
+				9F99C30224EAEC1500F89D57 /* SearchResultViewController.swift */,
+				9F99C30424EAEC4E00F89D57 /* PostEditorViewController.swift */,
+				9F99C30624EAEC6B00F89D57 /* PublishPostViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E5ED7CE0958F613D629AE76F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA69B65BD485983D08424A /* Pods_Instagam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F99C2E024EAE88300F89D57 /* Build configuration list for PBXNativeTarget "Instagam" */;
 			buildPhases = (
+				F7610DB18C69EF28F148EFFB /* [CP] Check Pods Manifest.lock */,
 				9F99C2C824EAE88200F89D57 /* Sources */,
 				9F99C2C924EAE88200F89D57 /* Frameworks */,
 				9F99C2CA24EAE88200F89D57 /* Resources */,
+				CE9074812BFC1A9A9930978A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,12 +278,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F99C2DC24EAE88300F89D57 /* LaunchScreen.storyboard in Resources */,
+				9F99C30B24EB403B00F89D57 /* GoogleService-Info.plist in Resources */,
 				9F99C2D924EAE88300F89D57 /* Assets.xcassets in Resources */,
 				9F99C2D724EAE88200F89D57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE9074812BFC1A9A9930978A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instagam/Pods-Instagam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instagam/Pods-Instagam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Instagam/Pods-Instagam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7610DB18C69EF28F148EFFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Instagam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F99C2C824EAE88200F89D57 /* Sources */ = {
@@ -251,12 +340,15 @@
 				9F99C2EB24EAEAA200F89D57 /* CameraViewController.swift in Sources */,
 				9F99C2EE24EAEAC600F89D57 /* NotificationViewController.swift in Sources */,
 				9F99C30524EAEC4E00F89D57 /* PostEditorViewController.swift in Sources */,
+				9F99C31224EB447100F89D57 /* StorageManager.swift in Sources */,
 				9F99C2F724EAEB6E00F89D57 /* RegistrationViewController.swift in Sources */,
+				9F99C30E24EB42D900F89D57 /* DatabaseManager.swift in Sources */,
 				9F99C2FF24EAEBE200F89D57 /* ListingViewController.swift in Sources */,
 				9F99C30324EAEC1500F89D57 /* SearchResultViewController.swift in Sources */,
 				9F99C2F924EAEB9700F89D57 /* PostViewController.swift in Sources */,
 				9F99C30124EAEBFE00F89D57 /* SearchViewController.swift in Sources */,
 				9F99C2D424EAE88200F89D57 /* HomeViewController.swift in Sources */,
+				9F99C31024EB43F200F89D57 /* AuthManager.swift in Sources */,
 				9F99C2F524EAEB5D00F89D57 /* LoginViewController.swift in Sources */,
 				9F99C2F024EAEAD500F89D57 /* ProfileViewController.swift in Sources */,
 				9F99C2D024EAE88200F89D57 /* AppDelegate.swift in Sources */,
@@ -402,6 +494,7 @@
 		};
 		9F99C2E124EAE88300F89D57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF5CB966529C290FD0C62C3 /* Pods-Instagam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +512,7 @@
 		};
 		9F99C2E224EAE88300F89D57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50EBB5C850380F36C367938 /* Pods-Instagam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

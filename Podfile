@@ -6,5 +6,17 @@ target 'Instagam' do
   use_frameworks!
 
   # Pods for Instagam
+pod 'Appirater'
+
+#Firebase
+
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Analytics'
+pod 'Firebase/Storage'
+
+
+
 
 end
