@@ -32,6 +32,7 @@
 		9F99C30E24EB42D900F89D57 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */; };
 		9F99C31024EB43F200F89D57 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C30F24EB43F200F89D57 /* AuthManager.swift */; };
 		9F99C31224EB447100F89D57 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31124EB447100F89D57 /* StorageManager.swift */; };
+		9F99C31424EB4C2400F89D57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31324EB4C2400F89D57 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9F99C30F24EB43F200F89D57 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9F99C31124EB447100F89D57 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		9F99C31324EB4C2400F89D57 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B50EBB5C850380F36C367938 /* Pods-Instagam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagam.release.xcconfig"; path = "Target Support Files/Pods-Instagam/Pods-Instagam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 				9F99C30D24EB42D900F89D57 /* DatabaseManager.swift */,
 				9F99C30F24EB43F200F89D57 /* AuthManager.swift */,
 				9F99C31124EB447100F89D57 /* StorageManager.swift */,
+				9F99C31324EB4C2400F89D57 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				9F99C2FF24EAEBE200F89D57 /* ListingViewController.swift in Sources */,
 				9F99C30324EAEC1500F89D57 /* SearchResultViewController.swift in Sources */,
 				9F99C2F924EAEB9700F89D57 /* PostViewController.swift in Sources */,
+				9F99C31424EB4C2400F89D57 /* Extensions.swift in Sources */,
 				9F99C30124EAEBFE00F89D57 /* SearchViewController.swift in Sources */,
 				9F99C2D424EAE88200F89D57 /* HomeViewController.swift in Sources */,
 				9F99C31024EB43F200F89D57 /* AuthManager.swift in Sources */,
@@ -499,6 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Instagam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,6 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Instagam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
