@@ -6,6 +6,7 @@
 //  Copyright © 2020 Akhadjon Abdukhalilov. All rights reserved.
 //
 
+import FirebaseAuth
 import SafariServices
 import UIKit
 
@@ -161,7 +162,35 @@ class LoginViewController: UIViewController {
             let password = userNameEmailField.text, !password.isEmpty, password.count >= 8 else {
             return
         }
+        
+        var username:String?
+        var email:String?
+        
         //Login Functionality
+        if userNameEmail.contains("@"), userNameEmail.contains("."){
+            //email
+            email = userNameEmail
+        }else{
+            //username
+            username = userNameEmail
+        }
+        
+        AuthManager.shared.LoginUser(username: username, email: email, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                        //user Logged in
+                     self.dismiss(animated: true, completion: nil)
+                    }
+                else{
+                    //error occured
+                    let alert = UIAlertController(title: "Login Error", message: " We were uanble to log you in", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert,animated: true)
+                    }
+                
+            }
+           
+        }
     }
     @objc func didTapTermButton(){
         guard let url = URL(string: "https://www.instagram.com/about/legal/terms/before-january-19-2013/") else { return }
@@ -178,7 +207,8 @@ class LoginViewController: UIViewController {
     }
     @objc func didCreateAcountButton(){
         let vc = RegistrationViewController()
-        present(vc,animated: true)
+        vc.title = "Create Acoount"
+        present(UINavigationController(rootViewController: vc),animated: true)
     }
    
     
