@@ -115,7 +115,7 @@ class RegistrationViewController: UIViewController {
             DispatchQueue.main.async {
                 if registered {
                     //good to go
-                    
+                    self.dismiss(animated: true, completion: nil)
                     
                 }else{
                     //failed
