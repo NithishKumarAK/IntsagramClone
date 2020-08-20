@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController {
  
     @objc func didTapSettingsButton(){
         let vc = SetttingsViewController()
-        vc.title = "Settins"
+        vc.title = "Settings"
         navigationController?.pushViewController(vc, animated: true)
     }
 }
