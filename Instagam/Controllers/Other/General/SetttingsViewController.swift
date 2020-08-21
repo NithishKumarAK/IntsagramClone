@@ -55,7 +55,7 @@ final class SetttingsViewController: UIViewController {
             SettingCellModel(title: "Invite Friends"){[weak self] in
                 self?.didTapInviteFriends()
             },
-            SettingCellModel(title: "Save original Posts"){[weak self] in
+            SettingCellModel(title: "Save Original Posts"){[weak self] in
                 self?.didTapSaveOriginalPosts()
             }
         ])
@@ -78,19 +78,20 @@ final class SetttingsViewController: UIViewController {
         ])
         
     }
-   
+    
     private func didTapEditProfile(){
-        
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC,animated: true)
     }
     
     private func didTapInviteFriends(){
         //Show share sheet to invite friends
     }
     private func didTapSaveOriginalPosts(){
-        let vc = EditProfileViewController()
-        vc.title = "Edit Profile"
-        let navVC = UINavigationController(rootViewController: vc)
-        present(navVC,animated: true)
+       
     }
     
     enum SettingURLType{

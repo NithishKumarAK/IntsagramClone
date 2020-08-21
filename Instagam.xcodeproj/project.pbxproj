@@ -37,6 +37,10 @@
 		9F99C31A24EF1BCB00F89D57 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31924EF1BCB00F89D57 /* IGFeedPostHeaderTableViewCell.swift */; };
 		9F99C31C24EF1BFD00F89D57 /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31B24EF1BFD00F89D57 /* IGFeedPostActionsTableViewCell.swift */; };
 		9F99C31E24EF1C3F00F89D57 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C31D24EF1C3F00F89D57 /* IGFeedPostGeneralTableViewCell.swift */; };
+		9FC233B624F07BA00019833E /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC233B524F07BA00019833E /* FormTableViewCell.swift */; };
+		9FC233B924F085F70019833E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC233B824F085F70019833E /* PhotoCollectionViewCell.swift */; };
+		9FC233BB24F086AA0019833E /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC233BA24F086AA0019833E /* ProfileInfoHeaderCollectionReusableView.swift */; };
+		9FC233BD24F087070019833E /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC233BC24F087070019833E /* ProfileTabsCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		9F99C31924EF1BCB00F89D57 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		9F99C31B24EF1BFD00F89D57 /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
 		9F99C31D24EF1C3F00F89D57 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		9FC233B524F07BA00019833E /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		9FC233B824F085F70019833E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FC233BA24F086AA0019833E /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		9FC233BC24F087070019833E /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
 		B50EBB5C850380F36C367938 /* Pods-Instagam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagam.release.xcconfig"; path = "Target Support Files/Pods-Instagam/Pods-Instagam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 		9F99C2E324EAE90800F89D57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FC233B724F085BC0019833E /* CollectionView Headers */,
 				9F99C31524EF199A00F89D57 /* Cells */,
 				9F99C2E724EAE98500F89D57 /* Storyboards */,
 				9F99C2D824EAE88300F89D57 /* Assets.xcassets */,
@@ -225,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				9F99C31824EF1B8F00F89D57 /* HomeFeed */,
+				9FC233B524F07BA00019833E /* FormTableViewCell.swift */,
+				9FC233B824F085F70019833E /* PhotoCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -238,6 +249,15 @@
 				9F99C31D24EF1C3F00F89D57 /* IGFeedPostGeneralTableViewCell.swift */,
 			);
 			path = HomeFeed;
+			sourceTree = "<group>";
+		};
+		9FC233B724F085BC0019833E /* CollectionView Headers */ = {
+			isa = PBXGroup;
+			children = (
+				9FC233BA24F086AA0019833E /* ProfileInfoHeaderCollectionReusableView.swift */,
+				9FC233BC24F087070019833E /* ProfileTabsCollectionReusableView.swift */,
+			);
+			path = "CollectionView Headers";
 			sourceTree = "<group>";
 		};
 		E5ED7CE0958F613D629AE76F /* Frameworks */ = {
@@ -373,15 +393,19 @@
 				9F99C31A24EF1BCB00F89D57 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				9F99C30524EAEC4E00F89D57 /* PostEditorViewController.swift in Sources */,
 				9F99C31224EB447100F89D57 /* StorageManager.swift in Sources */,
+				9FC233B624F07BA00019833E /* FormTableViewCell.swift in Sources */,
 				9F99C2F724EAEB6E00F89D57 /* RegistrationViewController.swift in Sources */,
+				9FC233BD24F087070019833E /* ProfileTabsCollectionReusableView.swift in Sources */,
 				9F99C30E24EB42D900F89D57 /* DatabaseManager.swift in Sources */,
 				9F99C2FF24EAEBE200F89D57 /* ListingViewController.swift in Sources */,
 				9F99C31724EF19E800F89D57 /* IGFeedPostTableViewCell.swift in Sources */,
+				9FC233B924F085F70019833E /* PhotoCollectionViewCell.swift in Sources */,
 				9F99C30324EAEC1500F89D57 /* SearchResultViewController.swift in Sources */,
 				9F99C2F924EAEB9700F89D57 /* PostViewController.swift in Sources */,
 				9F99C31424EB4C2400F89D57 /* Extensions.swift in Sources */,
 				9F99C31E24EF1C3F00F89D57 /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				9F99C30124EAEBFE00F89D57 /* SearchViewController.swift in Sources */,
+				9FC233BB24F086AA0019833E /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				9F99C2D424EAE88200F89D57 /* HomeViewController.swift in Sources */,
 				9F99C31024EB43F200F89D57 /* AuthManager.swift in Sources */,
 				9F99C2F524EAEB5D00F89D57 /* LoginViewController.swift in Sources */,
