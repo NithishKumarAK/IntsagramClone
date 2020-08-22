@@ -7,6 +7,7 @@ target 'Instagam' do
 
   # Pods for Instagam
 pod 'Appirater'
+pod 'SDWebImage'
 
 #Firebase
 
@@ -15,8 +16,6 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Analytics'
 pod 'Firebase/Storage'
-
-
 
 
 end
