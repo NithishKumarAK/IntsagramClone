@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		504E486B5A4C0E5633AAE841 /* Pods_Instagam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFA69B65BD485983D08424A /* Pods_Instagam.framework */; };
+		9F16EF7F24F46D8000E265A1 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16EF7E24F46D8000E265A1 /* UserFollowTableViewCell.swift */; };
 		9F3D768F24F1B55A002E2B3B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3D768E24F1B55A002E2B3B /* Models.swift */; };
 		9F99C2D024EAE88200F89D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C2CF24EAE88200F89D57 /* AppDelegate.swift */; };
 		9F99C2D224EAE88200F89D57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C2D124EAE88200F89D57 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0CFA69B65BD485983D08424A /* Pods_Instagam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF5CB966529C290FD0C62C3 /* Pods-Instagam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagam.debug.xcconfig"; path = "Target Support Files/Pods-Instagam/Pods-Instagam.debug.xcconfig"; sourceTree = "<group>"; };
+		9F16EF7E24F46D8000E265A1 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
 		9F3D768E24F1B55A002E2B3B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = "Instagam/Views/CollectionView Headers/Models.swift"; sourceTree = SOURCE_ROOT; };
 		9F99C2CC24EAE88200F89D57 /* Instagam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F99C2CF24EAE88200F89D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				9F99C31824EF1B8F00F89D57 /* HomeFeed */,
+				9F16EF7E24F46D8000E265A1 /* UserFollowTableViewCell.swift */,
 				9FC233B524F07BA00019833E /* FormTableViewCell.swift */,
 				9FC233B824F085F70019833E /* PhotoCollectionViewCell.swift */,
 			);
@@ -396,6 +399,7 @@
 				9F99C31A24EF1BCB00F89D57 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				9F99C30524EAEC4E00F89D57 /* PostEditorViewController.swift in Sources */,
 				9F99C31224EB447100F89D57 /* StorageManager.swift in Sources */,
+				9F16EF7F24F46D8000E265A1 /* UserFollowTableViewCell.swift in Sources */,
 				9F3D768F24F1B55A002E2B3B /* Models.swift in Sources */,
 				9FC233B624F07BA00019833E /* FormTableViewCell.swift in Sources */,
 				9F99C2F724EAEB6E00F89D57 /* RegistrationViewController.swift in Sources */,
