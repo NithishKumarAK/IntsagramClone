@@ -115,7 +115,7 @@ extension ProfileViewController:UICollectionViewDataSource, UICollectionViewDele
         if section == 0 {
             return CGSize(width: collectionView.with, height: collectionView.height/3)
         }
-        return  CGSize(width: collectionView.with, height: 50)
+        return  CGSize(width: collectionView.with, height: 40)
     }
     
 }
@@ -129,14 +129,23 @@ extension ProfileViewController:ProfileInfoHeaderCollectionReusableViewDelegate 
     }
     
     func profileHeaderDidTapFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListingViewController(data: ["Joe","Joe","Joe","Joe","Joe"])
+        
+        var mockData = [UserRelationship]()
+        for x in 0..<10{
+            mockData.append(UserRelationship(userName: "@joe", name:"Joe Smith", type: x%2 == 0 ? .following: .not_following ))
+        }
+        let vc = ListingViewController(data:mockData)
         vc.title = "Following"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func profileHeaderDidTapFollowersButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListingViewController(data: ["Joe","Joe","Joe","Joe","Joe"])
+        var mockData = [UserRelationship]()
+        for x in 0..<10{
+            mockData.append(UserRelationship(userName: "@joe", name:"Joe Smith", type: x%2 == 0 ? .following: .not_following ))
+        }
+        let vc = ListingViewController(data:mockData )
         vc.title = "Followers"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
