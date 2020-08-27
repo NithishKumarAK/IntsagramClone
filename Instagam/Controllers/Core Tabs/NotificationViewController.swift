@@ -21,7 +21,6 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     
     private lazy var noNotificatinsView = NoNotificationsView()
     
-    
     //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +54,6 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         noNotificatinsView.frame = CGRect(x: 0, y: 0, width: view.with/2, height: view.with/4)
         noNotificatinsView.center = view.center
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
