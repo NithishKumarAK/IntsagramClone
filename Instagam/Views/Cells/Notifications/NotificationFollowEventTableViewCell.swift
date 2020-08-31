@@ -9,17 +9,19 @@
 import UIKit
 
 protocol NotificationFollowEventTableViewCellDelagate:AnyObject {
-    func didTapFollowUnFollowButton(model:String)
+    func didTapFollowUnFollowButton(model:UserNotification)
 }
 
 class NotificationFollowEventTableViewCell: UITableViewCell {
     
     static let identifier = "NotificationFollowEventTableViewCell"
     weak var delegate :NotificationFollowEventTableViewCellDelagate?
+    private var model :UserNotification?
     
     private let profileImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
+        imageView.backgroundColor = .tertiarySystemBackground
         imageView.contentMode = .scaleToFill
         return imageView
     }()
@@ -28,11 +30,14 @@ class NotificationFollowEventTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .label
         label.numberOfLines = 0
+        label.text = "@kanyeWest followed you"
         return label
     }()
     
     private let followButton:UIButton = {
         let button = UIButton()
+        button.layer.cornerRadius = 4
+        button.layer.masksToBounds = true
         return button
     }()
     
@@ -42,10 +47,49 @@ class NotificationFollowEventTableViewCell: UITableViewCell {
         contentView.addSubview(profileImageView)
         contentView.addSubview(label)
         contentView.addSubview(followButton)
+        followButton.addTarget(self, action: #selector(didTapFollowButton), for: .touchUpInside)
+        configureForFollow()
+        selectionStyle = .none
     }
     
-    public func configure(with model:String){
+    @objc func didTapFollowButton(){
+        guard let model = model else {
+            return
+        }
+        delegate?.didTapFollowUnFollowButton(model: model)
+    }
+    
+    public func configure(with model:UserNotification){
+        self.model = model
         
+        switch model.type{
+        case .like(_):
+            break
+        case .follow(let state):
+            switch state {
+            case .following:
+                //show unfollow Button
+               configureForFollow()
+            case .not_following:
+                //Show follow button
+                followButton.setTitle("Follow", for: .normal)
+                followButton.setTitleColor(.white, for: .normal)
+                followButton.layer.borderWidth = 0
+                followButton.backgroundColor = .link
+            }
+            break
+            //comfigure button
+            
+        }
+        label.text = model.text
+        profileImageView.sd_setImage(with: model.user.profilePhoto, completed: nil)
+        
+    }
+    private func configureForFollow(){
+        followButton.setTitle("Unfollow", for: .normal)
+        followButton.setTitleColor(.label, for: .normal)
+        followButton.layer.borderWidth = 1
+        followButton.layer.borderColor = UIColor.secondaryLabel.cgColor
     }
     
     required init?(coder: NSCoder) {
@@ -54,6 +98,16 @@ class NotificationFollowEventTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        
+        profileImageView.frame = CGRect(x: 3, y: 3, width:contentView.height - 6, height: contentView.height - 6)
+        profileImageView.layer.cornerRadius = profileImageView.height/2
+        
+        let size :CGFloat = 100
+        let buttonHeight:CGFloat = 40
+        followButton.frame = CGRect(x: contentView.with-5-size, y: (contentView.height-buttonHeight)/2, width:size, height: buttonHeight)
+        
+        label.frame = CGRect(x: profileImageView.right + 5, y: 0, width: contentView.with-size-profileImageView.with - 16, height: contentView.height)
         
     }
     override func prepareForReuse() {
