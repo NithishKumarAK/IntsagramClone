@@ -62,8 +62,10 @@ final class NotificationViewController: UIViewController, UITableViewDelegate, U
     
     private func fetchNotications(){
         for x in 0...100{
-            let post = UserPost(identifier: "", postType: .phot, thumbnailImage: URL(string: "https://www.google.com")!, postURL:  URL(string: "https://www.google.com")!, caption: nil , likeCount: [], comment: [], craetedDate: Date(), taggedUser: [])
-            let model = UserNotification(type: x%2 == 0 ? .like(post: post) : .follow(state:.not_following), text: "Hello world", user: User(userName: "joe ", bio: "", name: (first:"", last:""), profilePhoto: URL(string: "https://www.google.com")!, birthDate: Date(), gender: .male, count: UserCount(following: 1, follower: 1, post: 1), joinedDate: Date()))
+            let user = User(userName: "joe ", bio: "", name: (first:"", last:""), profilePhoto: URL(string: "https://www.google.com")!, birthDate: Date(), gender: .male, count: UserCount(following: 1, follower: 1, post: 1), joinedDate: Date())
+            
+            let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://www.google.com")!, postURL:  URL(string: "https://www.google.com")!, caption: nil , likeCount: [], comment: [], craetedDate: Date(), taggedUser: [],owner: user)
+            let model = UserNotification(type: x%2 == 0 ? .like(post: post) : .follow(state:.not_following), text: "Hello world", user: user)
             models.append(model)
         }
     }
@@ -109,8 +111,17 @@ final class NotificationViewController: UIViewController, UITableViewDelegate, U
 
 extension NotificationViewController:NotificationLikeEventTableViewCellDelagate{
     func didTapReleatedPostButton(model: UserNotification) {
-        print("Tapped Post")
-        //open post
+        switch model.type {
+        case .like(let post):
+            let vc = PostViewController(model: post)
+            vc.title = post.postType.rawValue
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        case .follow(_):
+            fatalError("Dev issue should never get called")
+        }
+      
+        
     }
 }
 

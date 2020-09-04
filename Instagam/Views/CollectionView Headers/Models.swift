@@ -28,8 +28,9 @@ struct User {
     let joinedDate:Date
 }
 
-public enum UserPostType{
-    case phot, video
+public enum UserPostType:String{
+    case photo = "Photo"
+    case video = "Video"
 }
 
 /// Represents user post
@@ -44,6 +45,7 @@ public struct UserPost {
     let comment:[PostComment]
     let craetedDate:Date
     let taggedUser:[String]
+    let owner:User
     
     
 }

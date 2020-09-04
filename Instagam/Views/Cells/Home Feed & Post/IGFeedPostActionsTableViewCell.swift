@@ -1,5 +1,5 @@
 //
-//  IGFeedPostTableViewCell.swift
+//  IGFeedPostActionsTableViewCell.swift
 //  Instagam
 //
 //  Created by Akhadjon Abdukhalilov on 8/21/20.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-final class IGFeedPostTableViewCell: UITableViewCell {
+class IGFeedPostActionsTableViewCell: UITableViewCell {
+
     
-    static let identifier = "IGFeedPostTableViewCell"
+    static let identifier = "IGFeedPostActionsTableViewCell"
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style:style,reuseIdentifier:reuseIdentifier)
+          contentView.backgroundColor = .systemGreen
     }
     
     required init?(coder: NSCoder) {
@@ -25,4 +27,8 @@ final class IGFeedPostTableViewCell: UITableViewCell {
         //configure cell
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
 }
