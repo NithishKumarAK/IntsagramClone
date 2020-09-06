@@ -30,20 +30,19 @@ class HomeViewController: UIViewController {
         
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         craeteMockModels()
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
         
     }
     
     private func craeteMockModels(){
         
-        let user = User(userName: "joe ", bio: "", name: (first:"", last:""), profilePhoto: URL(string: "https://www.google.com")!, birthDate: Date(), gender: .male, count: UserCount(following: 1, follower: 1, post: 1), joinedDate: Date())
+        let user = User(userName: "@kanyeWest", bio: "", name: (first:"", last:""), profilePhoto: URL(string: "https://www.google.com")!, birthDate: Date(), gender: .male, count: UserCount(following: 1, follower: 1, post: 1), joinedDate: Date())
         
         let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://www.google.com")!, postURL:  URL(string: "https://www.google.com")!, caption: nil , likeCount: [], comment: [], craetedDate: Date(), taggedUser: [],owner: user)
         
@@ -66,7 +65,6 @@ class HomeViewController: UIViewController {
         handleNotAuthenticated()
     }
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -83,8 +81,6 @@ class HomeViewController: UIViewController {
             
         }
     }
-    
-    
 }
 
 extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
@@ -138,14 +134,14 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             model = feedRenderModels[position]
         }
         
-        
-        
         let subsection = x % 4
         if subsection == 0 {
             //header
             switch model.header.renderType{
             case .header(let user):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHeaderTableViewCell.identifier, for: indexPath) as! IGFeedPostHeaderTableViewCell
+                cell.configure(with: user)
+                cell.delegate = self
                 return cell
             case .comments, .actions, .primaryContent: return UITableViewCell()
             }
@@ -155,6 +151,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             switch model.post.renderType{
             case .primaryContent(let post):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier, for: indexPath) as! IGFeedPostTableViewCell
+                cell.configure(post: post)
                 return cell
              case .comments, .actions, .header: return UITableViewCell()
             }
@@ -163,7 +160,8 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             //action
             switch model.action.renderType {
             case .actions(let provider):
-                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.identifier, for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.identifier, for: indexPath) as! IGFeedPostActionsTableViewCell
+                cell.delegate = self
                 return cell
             case .comments, .header, .primaryContent :  return UITableViewCell()
             }
@@ -172,7 +170,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             //comments
             switch model.comments.renderType{
             case .comments(let comments):
-                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as! IGFeedPostGeneralTableViewCell
                 return cell
             case .actions, .header, .primaryContent:return UITableViewCell()
             }
@@ -212,5 +210,35 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         let subsection = section%4
         return subsection == 3 ? 70:0
     }
+    
+}
+
+extension HomeViewController:IGFeedPostHeaderTableViewCellDelegate{
+    func didTapMorebutton() {
+        let actionSheet = UIAlertController(title: "Post Options", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Report Post", style: .destructive, handler: {[weak self] _ in
+            self?.reportPost()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet,animated: true)
+    }
+    
+    func reportPost(){
+        
+    }
+}
+extension HomeViewController:IGFeedPostActionsTableViewCellDelegate{
+    func didTapLikeButton() {
+        print("Like")
+    }
+    
+    func didTapCommentButton() {
+        print("Comment")
+    }
+    
+    func didTapSendButton() {
+        print("Send")
+    }
+    
     
 }
